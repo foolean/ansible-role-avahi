@@ -13,8 +13,11 @@
       become: true
       ansible.builtin.package:
         name:
+          # RedHat packages
           - 'avahi'
           - 'avahi-autoipd'
+          # Debian packages
+          - 'avahi-daemon'
         state: absent
 
   # Tags to be applied to this role (block)
